@@ -4,17 +4,19 @@ export const StatisticWrap = styled.section`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  width: 360px;
+  padding: 15px 10px;
   text-align: center;
   align-items: center;
   justify-content: center;
   background-color: #dda0dd;
   border-radius: 20px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `;
 
 export const StatisticInfoList = styled.ul`
   display: flex;
+  gap: 5px;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -32,10 +34,20 @@ export const StatisticInfoItem = styled.li`
   padding: 10px;
   width: 50px;
   border-radius: 50px;
-  :nth-child(even) {
-    background-color: #da70d6;
-  }
-  :nth-child(odd) {
-    background-color: #ba55d3;
-  }
+  :nth-child(1) {
+    background-color: ${'#' + (((1 << 24) * Math.random()) | 0).toString(16)}};
+  };
+  :nth-child(2) {
+    background-color: ${'#' + (((1 << 24) * Math.random()) | 0).toString(16)}};
+  };
+  :nth-child(3) {
+    background-color: ${'#' + (((1 << 24) * Math.random()) | 0).toString(16)}};
+  };
+  :nth-child(4) {
+    background-color: ${'#' + (((1 << 24) * Math.random()) | 0).toString(16)}};
+  };
+  :nth-child(5) {
+    background-color: ${'#' + (((1 << 24) * Math.random()) | 0).toString(16)}};
+  };
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `;

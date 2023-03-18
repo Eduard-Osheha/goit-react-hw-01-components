@@ -23,6 +23,5 @@ export const FriendItemInfo = styled.div`
   width: 340px;
   padding: 15px;
   border-radius: 20px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `;

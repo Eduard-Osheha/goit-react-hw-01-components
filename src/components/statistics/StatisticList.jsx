@@ -1,8 +1,8 @@
-import { StatisticItem } from './StatisticItem';
 import {
   StatisticWrap,
   StatisticInfoList,
   StatisticInfoItem,
+  StatisticInfo,
 } from './Statistic.styled';
 
 export const StatisticList = ({ title, stats }) => {
@@ -13,7 +13,10 @@ export const StatisticList = ({ title, stats }) => {
       <StatisticInfoList>
         {stats.map(data => (
           <StatisticInfoItem key={data.id}>
-            <StatisticItem stats={data} />
+            <StatisticInfo>
+              <span>{data.label}</span>
+              <span>{data.percentage}%</span>
+            </StatisticInfo>
           </StatisticInfoItem>
         ))}
       </StatisticInfoList>

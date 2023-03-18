@@ -1,5 +1,9 @@
-import { TransactionItem } from './TransactionItem';
-import { TableWrap, TableTitle, TableRowWrap } from './Transaction.styled';
+import {
+  TableWrap,
+  TableTitle,
+  TableRowWrap,
+  TableItem,
+} from './Transaction.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
@@ -15,7 +19,9 @@ export const TransactionHistory = ({ items }) => {
       <tbody>
         {items.map(item => (
           <TableRowWrap key={item.id}>
-            <TransactionItem item={item} />
+            <TableItem>{item.type}</TableItem>
+            <TableItem>{item.amount}</TableItem>
+            <TableItem>{item.currency}</TableItem>
           </TableRowWrap>
         ))}
       </tbody>

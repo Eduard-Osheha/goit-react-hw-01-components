@@ -7,7 +7,9 @@ export const Wrapper = styled.div`
   text-align: center;
   background: #ba55d3;
   border-radius: 20px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 `;
 
 export const ProfileInfoWrap = styled.div`
@@ -42,4 +44,5 @@ export const ProfileFoto = styled.div`
   height: 150px;
   border-radius: 50px;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
