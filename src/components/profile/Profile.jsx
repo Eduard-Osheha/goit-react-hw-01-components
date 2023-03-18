@@ -1,3 +1,11 @@
+import {
+  Wrapper,
+  ProfileInfoWrap,
+  SocialsInfoWrap,
+  SocialItem,
+  ProfileFoto,
+} from './Profile.styled';
+
 export const Profile = ({
   username,
   tag,
@@ -5,27 +13,29 @@ export const Profile = ({
   avatar,
   stats: { followers, views, likes },
 }) => (
-  <div className="profile">
-    <div className="description">
-      <img src={avatar} alt="User avatar" className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">{tag}</p>
+  <Wrapper>
+    <ProfileInfoWrap>
+      <ProfileFoto>
+        <img src={avatar} alt="User avatar" width="130px" />
+      </ProfileFoto>
+      <h3 className="name">{username}</h3>
+      <p className="tag">@{tag}</p>
       <p className="location">{location}</p>
-    </div>
+    </ProfileInfoWrap>
 
-    <ul className="stats">
-      <li>
+    <SocialsInfoWrap>
+      <SocialItem>
         <span className="label">Followers</span>
         <span className="quantity">{followers}</span>
-      </li>
-      <li>
+      </SocialItem>
+      <SocialItem>
         <span className="label">Views</span>
         <span className="quantity">{views}</span>
-      </li>
-      <li>
+      </SocialItem>
+      <SocialItem>
         <span className="label">Likes</span>
         <span className="quantity">{likes}</span>
-      </li>
-    </ul>
-  </div>
+      </SocialItem>
+    </SocialsInfoWrap>
+  </Wrapper>
 );

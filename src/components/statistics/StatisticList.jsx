@@ -1,17 +1,22 @@
 import { StatisticItem } from './StatisticItem';
+import {
+  StatisticWrap,
+  StatisticInfoList,
+  StatisticInfoItem,
+} from './Statistic.styled';
 
 export const StatisticList = ({ title, stats }) => {
   return (
-    <section className="statistics">
+    <StatisticWrap>
       {title && <h2 className="title">{title}</h2>}
 
-      <ul className="stat-list">
+      <StatisticInfoList>
         {stats.map(data => (
-          <li className="item" key={data.id}>
+          <StatisticInfoItem key={data.id}>
             <StatisticItem stats={data} />
-          </li>
+          </StatisticInfoItem>
         ))}
-      </ul>
-    </section>
+      </StatisticInfoList>
+    </StatisticWrap>
   );
 };

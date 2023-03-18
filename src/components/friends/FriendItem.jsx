@@ -1,12 +1,13 @@
+import { FriendItemInfo } from './Friend.styled';
+
 export const FriendItem = ({ friend: { avatar, name, isOnline } }) => {
   return (
-    <>
+    <FriendItemInfo>
       {isOnline ? (
         <span
           className="status-online"
           style={{
             display: 'flex',
-            border: '1px solid green',
             borderRadius: 50,
             width: 15,
             height: 15,
@@ -21,12 +22,12 @@ export const FriendItem = ({ friend: { avatar, name, isOnline } }) => {
             borderRadius: 50,
             width: 15,
             height: 15,
-            backgroundColor: '#757575',
+            backgroundColor: 'red',
           }}
         ></span>
       )}
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </>
+      <h3 className="name">{name}</h3>
+    </FriendItemInfo>
   );
 };
