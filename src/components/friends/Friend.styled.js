@@ -7,11 +7,17 @@ export const FriendListWrap = styled.ul`
   border-radius: 20px;
   align-items: flex-start;
   justify-content: left;
-  gap: 10px;
+  gap: 20px;
 `;
 
 export const FriendItemWrap = styled.li`
   display: flex;
+  border-radius: 20px;
+  :nth-child(even) {
+    background-color: #da70d6;
+  }
+  :nth-child(odd) {
+    background-color: #dda0dd;
   }
 `;
 
