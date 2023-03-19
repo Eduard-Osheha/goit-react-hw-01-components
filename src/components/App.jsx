@@ -1,6 +1,5 @@
 import './common/CommonStyled';
 import { Container } from './common/CommonStyled';
-import 'components/common/propTypes';
 
 import data from 'data/data.json';
 import friends from 'data/friends.json';

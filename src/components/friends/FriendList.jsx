@@ -1,48 +1,26 @@
-import {
-  FriendListWrap,
-  FriendItemWrap,
-  FriendItemInfo,
-} from './Friend.styled';
+import PropTypes from 'prop-types';
+import { FriendListWrap, FriendItemWrap } from './Friend.styled';
+import { FriendListItem } from './FriendListItem';
 
 export const FriendList = ({ friends }) => {
   return (
     <FriendListWrap>
       {friends.map(friend => (
         <FriendItemWrap key={friend.id}>
-          <FriendItemInfo>
-            {friend.isOnline ? (
-              <span
-                className="status-online"
-                style={{
-                  display: 'flex',
-                  borderRadius: 50,
-                  width: 15,
-                  height: 15,
-                  backgroundColor: 'green',
-                }}
-              ></span>
-            ) : (
-              <span
-                className="status-offline"
-                style={{
-                  display: 'flex',
-                  borderRadius: 50,
-                  width: 15,
-                  height: 15,
-                  backgroundColor: 'red',
-                }}
-              ></span>
-            )}
-            <img
-              className="avatar"
-              src={friend.avatar}
-              alt="User avatar"
-              width="48"
-            />
-            <h3 className="name">{friend.name}</h3>
-          </FriendItemInfo>
+          <FriendListItem friend={friend} />
         </FriendItemWrap>
       ))}
     </FriendListWrap>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
